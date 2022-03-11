@@ -39,7 +39,7 @@
                         <i class="fa-solid fa-heart text-danger"></i>
                     </li>
 
-                    <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
+                    <li class="nav-link active" role="button" onclick="switchTab( 'reported')">
                         <i class="fa-solid fa-eye-slash"></i>
                     </li>
                 </ul>
@@ -57,13 +57,63 @@
             <h1 class="mt-2 mb-4">Reported posts</h1>
         </div>
     </main>
-    <section id="q&a">
-
+    <section id="question-section">
+        <div class="container mt-3 mb-4">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            How does the Javascript work?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Javascript is a high-level programming language.</strong>Basically when the web browser loads a web page, parses the HTML, and creates DOM (Document Object Model) from the contents. The DOM presents a live site view of the web page to our JavaScript code.Javascript works from top to bottom.We write the code and run our code in browser that has 'V8' javascript machine which interpreted and gets excuted each code line by line.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            What does Javascript event loop do?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           JavaScript has a event listeners and event loop based on runtime model.It is responsible for execute the code,handles the event loop  queues,which is the secret that works behind javascript's programming.Example: <code>setTimeout</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Local srorage Vs. Session storage?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Local storage data stored in our browser until explicitly deleted.Chnages can also be saved and modified for all current and future visits to the site.
+                            <br>
+                            <br>
+                            Session storage data can be saved or deleted until the tab is closed.It changes per tab.Once the tab is closed, all the session data is deleted.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <footer class="mt-5"></footer>
 
     <!-- add javascript  file  -->
     <script src="./js/app.js"></script>
+    <!-- add bootsrap js cdn link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>
